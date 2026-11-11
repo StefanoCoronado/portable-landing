@@ -98,7 +98,7 @@
           <hr class="title-rule">
         </div>
         <ol class="tl">
-<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><div><h3>Mira qué trae el repo</h3><p>No instala nada. Lista las skills de <a href="https://github.com/StefanoCoronado/skills-portables" target="_blank" rel="noopener">skills-portables</a>.</p><div class="mini-cmd"><code id="s0">npx skills add StefanoCoronado/skills-portables --list</code><button type="button" class="copy-btn" data-copy-target="s0">Copiar</button></div></div><span class="tm">1 min</span></li>
+<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><div><h3>Mira qué trae el repo</h3><p>Lista las skills de <a href="https://github.com/StefanoCoronado/skills-portables" target="_blank" rel="noopener">skills-portables</a> sin instalar nada.</p><div class="mini-cmd"><code id="s0">npx skills add StefanoCoronado/skills-portables --list</code><button type="button" class="copy-btn" data-copy-target="s0">Copiar</button></div></div><span class="tm">1 min</span></li>
 <li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><div><h3>Instala la skill</h3><p>Con <code>--skill</code> eliges una: <code>peso-landing</code> o <code>antes-de-instalar</code>. El instalador escanea la skill y muestra el nivel de riesgo: anótalo antes de usarla.</p><div class="mini-cmd"><code id="s1">npx skills add StefanoCoronado/skills-portables --skill peso-landing</code><button type="button" class="copy-btn" data-copy-target="s1">Copiar</button></div></div><span class="tm">2 min</span></li>
 <li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><div><h3>Comprueba que la ve</h3><p>En Claude Code escribe <code>/skills</code>. Si no sale, corre <code>/reload-skills</code> o reinicia Claude Code.</p></div><span class="tm">1 min</span></li>
 <li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><div><h3>Invócala por su nombre</h3><p>Claude Code: <code>/peso-landing ./mi-landing</code>. Sin agente, con Node 18 o superior: <code>node ruta-de-la-skill/scripts/auditar.mjs ./mi-landing</code>, con la ruta donde quedó instalada.</p></div><span class="tm">2 min</span></li>
@@ -166,7 +166,7 @@ No modifiques ningún archivo.</code></pre>
           </div>
           </div>
         </div>
-        <p class="fine-note">Pégalos en Claude Code. No los he probado en otra herramienta: lo que responda es tu resultado, no el mío.</p>
+        <p class="fine-note">Pégalos en Claude Code. Solo los he probado en esa herramienta; en otra, el resultado será tuyo.</p>
       </div>
     </section>
     <section class="sec sec-alt" id="verificado">
@@ -207,7 +207,7 @@ No modifiques ningún archivo.</code></pre>
             <div class="finding"><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg><span>Una imagen sin <code>width</code> y <code>height</code>: la página salta al cargar. Arreglo: declarar sus medidas.</span></div>
             <div class="finding"><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg><span>Tres animaciones que mueven el ancho de un elemento: el navegador recalcula la página. Arreglo: usar <code>transform</code>.</span></div>
             <div class="finding"><svg class="ic ic-ok" aria-hidden="true"><use href="#i-check"/></svg><span>Sin dominios externos, sin enlaces rotos y sin archivos <code>.env</code> a la vista.</span></div>
-            <div class="finding"><svg class="ic ic-bad" aria-hidden="true"><use href="#i-x"/></svg><span>Revisa archivos, no abre la página en un navegador. Para medir velocidad real usa PageSpeed Insights.</span></div>
+            <div class="finding"><svg class="ic ic-bad" aria-hidden="true"><use href="#i-x"/></svg><span>Solo revisa archivos. Para medir la velocidad real en un navegador usa PageSpeed Insights.</span></div>
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@ No modifiques ningún archivo.</code></pre>
           <hr class="title-rule">
         </div>
         <div class="ic-cards">
-          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><h3>1. Tu flujo</h3><p><code>perfil.mjs</code> lee tu proyecto: lenguajes, dependencias, skills, hooks y servidores MCP que ya usas. Nunca abre tu <code>.env</code>.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><h3>1. Tu flujo</h3><p><code>perfil.mjs</code> lee tu proyecto (lenguajes, dependencias, skills, hooks y servidores MCP que ya usas) sin abrir tu <code>.env</code>.</p></div>
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><h3>2. Radiografía</h3><p><code>radiografia.mjs</code> revisa el plugin, skill o repo sin instalarlo: cuánto contexto ocupa, licencia y patrones de riesgo, como leer cookies del navegador o descargar y ejecutar código.</p></div>
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>3. Veredicto</h3><p>Pros, contras frente a lo que ya tienes y una recomendación: INSTALAR, PROBAR EN AISLADO o NO INSTALAR, con la evidencia citada.</p></div>
         </div>
@@ -243,7 +243,7 @@ Dame pros, contras frente a lo que ya uso y tu recomendación con evidencia.</co
         <div class="ic-cards">
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-utensils"/></svg></span><h3>Inmobiliaria en Manta</h3><p>Antes de publicar la landing de un proyecto, la pasas por <code>peso-landing</code>: fotos pesadas, botones sin nombre o un <code>.env</code> olvidado salen antes que el cliente los vea.</p></div>
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-cross"/></svg></span><h3>Consultorio en Jipijapa</h3><p>Creas una skill con el tono de tus respuestas de citas y la instalas una vez. Sin datos de pacientes dentro.</p></div>
-          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span><h3>Un repo, varias skills</h3><p>Instalas solo las que necesitas con <code>--skill</code> y no copias carpetas a mano.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span><h3>Un repo, varias skills</h3><p>Instalas solo las que necesitas con <code>--skill</code>, sin copiar carpetas a mano.</p></div>
         </div>
       </div>
     </section>
