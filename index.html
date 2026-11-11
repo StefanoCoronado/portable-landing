@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparte tu skill con un comando | Crowned Studio</title>
+  <meta name="description" content="Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Comparte tu skill con un comando | Crowned Studio">
+  <meta property="og:description" content="Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
+  <meta property="og:locale" content="es_EC">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comparte tu skill con un comando",
+    "description": "Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.",
+    "inLanguage": "es-EC",
+    "author": { "@type": "Person", "name": "Stéfano Coronado" },
+    "publisher": { "@type": "Organization", "name": "Crowned Studio" }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="assets/crowned-logo-88.png">
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><!--icons--><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5A1.500 1.500 0 0 1 4.500 5H9l2 2.500h8.500A1.500 1.500 0 0 1 21 9v9.500a1.500 1.500 0 0 1-1.500 1.500h-15A1.500 1.500 0 0 1 3 18.500z"/></symbol><symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="m7 10 3 2.5L7 15M12.5 15H17"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 5l-4 14"/></symbol><symbol id="i-claude" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5h18.4zM12 10v4.5M12 17.2v.1"/></symbol><symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M6 20h12M5 7h14M5 7l-2.5 6h5zM19 7l-2.5 6h5z"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol><symbol id="i-utensils" viewBox="0 0 24 24"><path d="M7 3v8M4.5 3v5a2.5 2.500 0 0 0 5 0V3M7 11v10M17 3c-2 2-3 4.500-3 7.500h3V21"/></symbol><symbol id="i-cross" viewBox="0 0 24 24"><path d="M9 3.5h6V9h5.500v6H15v5.500H9V15H3.500V9H9z"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.500-3.500L4 9M4 4v5h5M4 13a8 8 0 0 0 14.500 3.500L20 15M20 20v-5h-5"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.4 3 7.9 7.5 9.5 4.5-1.6 7.5-5.1 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol></svg><!--/icons-->
+
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="brand" aria-label="Crowned Studio: inicio">
+        <img src="assets/crowned-logo-88.png" alt="Crowned Studio" width="44" height="44">
+        <span class="brand-text">Crowned Studio</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#requisitos">Requisitos</a>
+        <a href="#pasos">Pasos</a>
+        <a href="#prompts">Prompts</a>
+        <a href="#verificado">Qué está probado</a>
+        <a href="#errores">Errores</a>
+      </nav>
+      <a class="btn btn-ghost btn-sm" href="https://instagram.com/stefanocoronadoo" target="_blank" rel="noopener">¡Contáctame!</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero scene" id="top">
+      <div class="hero-bg dot-grid" aria-hidden="true"></div>
+      <div class="hero-crown" aria-hidden="true"><i class="halo"></i><img src="assets/crowned-logo-88.png" alt="" width="48" height="48"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Skills portables · Claude Code · 11/11/2026</p>
+          <h1>Comparte tu skill con <em>un comando</em></h1>
+          <p class="lede">Instala las skills del repo con <code>npx skills add StefanoCoronado/skills-portables</code>. Incluye una skill de ejemplo lista para probar en Claude Code.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#pasos">Ver los 4 pasos</a>
+            <a class="btn btn-ghost btn-lg" href="#verificado">Qué está probado</a>
+          </div>
+        </div>
+        <div class="cs" role="img" aria-label="Ejemplo: npx skills add instala peso-landing y Claude Code la lista con /skills"><div class="w-h it" style="--d:.1s"><b><svg class="ic acc" aria-hidden="true"><use href="#i-folder"/></svg>npx skills add</b><span>peso-landing</span></div>
+      <ul class="w-l"><li class="it" style="--d:0.5s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></i>Escaneo de riesgo<small>antes de instalar</small></li><li class="it" style="--d:1s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></i>Instalación<small>--skill peso-landing</small></li></ul><div class="prompt-line it" style="--d:.5s"><svg class="ic ic-claude" aria-hidden="true"><use href="#i-claude"/></svg><span>/peso-landing ./mi-landing</span></div><div class="chip cl it" style="--d:2.6s"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Un comando, una skill</div></div>
+      </div>
+    </section>
+
+    <section class="sec" id="requisitos">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Qué necesitas y <em>qué límite tienes</em></h2>
+          <hr class="title-rule">
+        </div>
+        <div class="ic-cards">
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><h3>Claude Code</h3><p>Instalado y con sesión. Las skills instaladas se listan con <code>/skills</code>.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></span><h3>Node 18+</h3><p><code>npx</code> para instalar, y Node para correr el script de la skill de ejemplo.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><h3>Acceso a GitHub</h3><p>El instalador descarga el repo <code>skills-portables</code> desde GitHub.</p></div>
+        </div>
+        <table class="lim" style="margin-top:18px"><tbody>
+          <tr><td><svg class="ic ic-ok" aria-hidden="true"><use href="#i-check"/></svg> Formato</td><td>Una skill es una carpeta con un <code>SKILL.md</code>, el formato del estándar abierto Agent Skills.</td></tr>
+          <tr><td><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg> Probado</td><td>Los scripts corren con Node en Windows. La instalación completa con <code>npx</code> y la ejecución desde Claude Code son pendientes: PRUEBA PROPIA PENDIENTE.</td></tr>
+          <tr><td><svg class="ic ic-warn" aria-hidden="true"><use href="#i-scale"/></svg> Tamaño</td><td>Mantén tu <code>SKILL.md</code> corto. El de peso-landing pesa 2,6 KB.</td></tr>
+          <tr><td><svg class="ic ic-bad" aria-hidden="true"><use href="#i-lock"/></svg> Riesgo</td><td>El instalador escanea con Snyk y muestra el nivel de riesgo. Es un análisis estático: puede fallar en ambos sentidos.</td></tr>
+        </tbody></table>
+        <p class="fine-note">Comandos del repo skills-portables y documentación de Claude Code, revisados el 11/11/2026.</p>
+      </div>
+    </section>
+    <section class="sec sec-alt" id="pasos">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Instalar y usar en <em>4 pasos</em></h2>
+          <hr class="title-rule">
+        </div>
+        <ol class="tl">
+<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><div><h3>Mira qué trae el repo</h3><p>No instala nada. Lista las skills de <a href="https://github.com/StefanoCoronado/skills-portables" target="_blank" rel="noopener">skills-portables</a>.</p><div class="mini-cmd"><code id="s0">npx skills add StefanoCoronado/skills-portables --list</code><button type="button" class="copy-btn" data-copy-target="s0">Copiar</button></div></div><span class="tm">1 min</span></li>
+<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><div><h3>Instala la skill</h3><p>Con <code>--skill</code> eliges una: <code>peso-landing</code> o <code>antes-de-instalar</code>. El instalador escanea la skill y muestra el nivel de riesgo: anótalo antes de usarla.</p><div class="mini-cmd"><code id="s1">npx skills add StefanoCoronado/skills-portables --skill peso-landing</code><button type="button" class="copy-btn" data-copy-target="s1">Copiar</button></div></div><span class="tm">2 min</span></li>
+<li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><div><h3>Comprueba que la ve</h3><p>En Claude Code escribe <code>/skills</code>. Si no sale, corre <code>/reload-skills</code> o reinicia Claude Code.</p></div><span class="tm">1 min</span></li>
+<li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><div><h3>Invócala por su nombre</h3><p>Claude Code: <code>/peso-landing ./mi-landing</code>. Sin agente, con Node 18 o superior: <code>node ruta-de-la-skill/scripts/auditar.mjs ./mi-landing</code>, con la ruta donde quedó instalada.</p></div><span class="tm">2 min</span></li>
+        </ol>
+        <p class="fine-note">Tiempos estimados, sin cronometrar. Lo que no he probado de este flujo está en la sección «Qué está probado».</p>
+      </div>
+    </section>
+    <!-- PRUEBA T1 PENDIENTE: capturas de Claude Code -->
+    <section class="sec" id="prompts">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Prompts para <em>Claude Code</em></h2>
+          <hr class="title-rule">
+        </div>
+<div data-tabs>
+          <div class="tabs-bar" role="tablist"><button type="button" role="tab" aria-selected="true"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Comprobar</button><button type="button" role="tab" aria-selected="false"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Auditar mi landing</button><button type="button" role="tab" aria-selected="false"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Crear mi skill</button><button type="button" role="tab" aria-selected="false"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Auditar portabilidad</button></div>
+          <div class="tab-p">
+          <div class="pr-item">
+            <div class="pr-top"><span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><h3>Comprobar<small>Que la herramienta la leyó y sabe qué hace.</small></h3></div>
+            <div class="promptbox">
+              <div class="promptbox-head"><span class="sub-label">Prompt 1 · verificar</span><button class="copy-btn" type="button" data-copy-target="pr-1">Copiar</button></div>
+              <pre><code id="pr-1">¿Qué skills tienes disponibles?
+Si ves peso-landing y antes-de-instalar, resume en 3 líneas qué hace cada una y qué necesita de mí para empezar.
+No ejecutes nada todavía.</code></pre>
+            </div>
+          </div>
+          </div>
+          <div class="tab-p" hidden>
+          <div class="pr-item">
+            <div class="pr-top"><span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><h3>Auditar mi landing<small>Primer uso real de la skill.</small></h3></div>
+            <div class="promptbox">
+              <div class="promptbox-head"><span class="sub-label">Prompt 2 · usar</span><button class="copy-btn" type="button" data-copy-target="pr-2">Copiar</button></div>
+              <pre><code id="pr-2">Usa la skill peso-landing sobre la carpeta [ruta de tu landing].
+Dame la nota, el veredicto y los hallazgos ordenados de más grave a menos.
+Para cada uno: archivo y línea, por qué importa y el arreglo.
+No modifiques ningún archivo.</code></pre>
+            </div>
+          </div>
+          </div>
+          <div class="tab-p" hidden>
+          <div class="pr-item">
+            <div class="pr-top"><span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><h3>Crear mi skill<small>Una skill nueva que ya nace en la carpeta compartida.</small></h3></div>
+            <div class="promptbox">
+              <div class="promptbox-head"><span class="sub-label">Prompt 3 · crear</span><button class="copy-btn" type="button" data-copy-target="pr-3">Copiar</button></div>
+              <pre><code id="pr-3">Usa /skill-creator (la skill oficial de Anthropic, nativa en Claude Code) para crear una skill nueva.
+Nombre en minúsculas: [nombre-en-minusculas]. Ubicación: .claude/skills/[nombre-en-minusculas]/SKILL.md.
+La skill sirve para: [tarea que repites cada semana en tu negocio].
+Antes de escribir, hazme las preguntas que falten, todas en un solo mensaje.
+No uses herramientas ni rutas propias de una sola aplicación.</code></pre>
+            </div>
+          </div>
+          </div>
+          <div class="tab-p" hidden>
+          <div class="pr-item">
+            <div class="pr-top"><span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><h3>Auditar portabilidad<small>Qué instrucción no existe en esta herramienta.</small></h3></div>
+            <div class="promptbox">
+              <div class="promptbox-head"><span class="sub-label">Prompt 4 · comparar</span><button class="copy-btn" type="button" data-copy-target="pr-4">Copiar</button></div>
+              <pre><code id="pr-4">Lee la skill [nombre] completa: su SKILL.md y sus archivos.
+Dime en una tabla:
+1) cuántos caracteres tiene SKILL.md y si lo leíste entero o cortado,
+2) qué instrucciones nombran herramientas, rutas o comandos que NO existen en esta herramienta,
+3) qué alternativa propones para cada una.
+No modifiques ningún archivo.</code></pre>
+            </div>
+          </div>
+          </div>
+        </div>
+        <p class="fine-note">Pégalos en Claude Code. No los he probado en otra herramienta: lo que responda es tu resultado, no el mío.</p>
+      </div>
+    </section>
+    <section class="sec sec-alt" id="verificado">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Qué está <em>probado</em>, y qué no</h2>
+          <hr class="title-rule">
+        </div>
+        <div class="ic-cards">
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Probado</h3><p>Los scripts con Node en Windows: <code>auditar.mjs</code> dio 85/100 el 09/11. <code>npx skills add --list</code> encuentra las dos skills (11/11).</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><h3>Sin probar</h3><p>La instalación completa con <code>npx</code>, el escaneo de riesgo y que Claude Code liste y ejecute la skill instalada.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><h3>Fuera de alcance</h3><p>Otras herramientas. No afirmo que la skill funcione en ellas.</p></div>
+        </div>
+        <p class="fine-note">Análisis estático: que no encuentre nada no prueba que algo sea seguro. Lee el SKILL.md y los scripts antes de usarla sobre datos sensibles.</p>
+      </div>
+    </section>
+    <section class="sec" id="ejemplo">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Ejemplo real: <em>la auditoría</em> de una landing</h2>
+          <hr class="title-rule">
+        </div>
+        <div class="demo" data-reveal-on>
+          <div class="panel">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-scale"/></svg>Peso por tipo (KB)</h3>
+            <div class="bars">
+              <div class="brow"><span>fuentes</span><span class="trk"><i style="--w:100%;--d:0.1s"></i></span><b>131,9</b></div>
+              <div class="brow"><span>texto (HTML, CSS, JS)</span><span class="trk"><i style="--w:57%;--d:0.3s"></i></span><b>75,1</b></div>
+              <div class="brow"><span>imágenes</span><span class="trk"><i class="ok" style="--w:16%;--d:0.5s"></i></span><b>21,1</b></div>
+            </div>
+            <div class="kpis">
+              <div class="kpi ok"><b>85/100</b><span>nota</span></div><div class="kpi "><b>0 altas</b><span>4 medias · 0 bajas</span></div>
+            </div>
+            <p class="fine-note" style="margin:0">Salida real de <code>auditar.mjs</code> sobre una landing mía, 09/11/2026. El texto se compara con un presupuesto de 100 KB.</p>
+          </div>
+          <div class="panel">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Qué encontró</h3>
+            <div class="finding"><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg><span>Una imagen sin <code>width</code> y <code>height</code>: la página salta al cargar. Arreglo: declarar sus medidas.</span></div>
+            <div class="finding"><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg><span>Tres animaciones que mueven el ancho de un elemento: el navegador recalcula la página. Arreglo: usar <code>transform</code>.</span></div>
+            <div class="finding"><svg class="ic ic-ok" aria-hidden="true"><use href="#i-check"/></svg><span>Sin dominios externos, sin enlaces rotos y sin archivos <code>.env</code> a la vista.</span></div>
+            <div class="finding"><svg class="ic ic-bad" aria-hidden="true"><use href="#i-x"/></svg><span>Revisa archivos, no abre la página en un navegador. Para medir velocidad real usa PageSpeed Insights.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="antes-de-instalar">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Antes de instalar, <em>escanea</em></h2>
+          <hr class="title-rule">
+        </div>
+        <div class="ic-cards">
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><h3>1. Tu flujo</h3><p><code>perfil.mjs</code> lee tu proyecto: lenguajes, dependencias, skills, hooks y servidores MCP que ya usas. Nunca abre tu <code>.env</code>.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><h3>2. Radiografía</h3><p><code>radiografia.mjs</code> revisa el plugin, skill o repo sin instalarlo: cuánto contexto ocupa, licencia y patrones de riesgo, como leer cookies del navegador o descargar y ejecutar código.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>3. Veredicto</h3><p>Pros, contras frente a lo que ya tienes y una recomendación: INSTALAR, PROBAR EN AISLADO o NO INSTALAR, con la evidencia citada.</p></div>
+        </div>
+        <div class="promptbox" style="margin-top:14px">
+          <div class="promptbox-head"><span class="sub-label">Prompt · decidir</span><button class="copy-btn" type="button" data-copy-target="pr-5">Copiar</button></div>
+          <pre><code id="pr-5">Usa la skill antes-de-instalar.
+Mi proyecto: [ruta de tu proyecto].
+Lo que quiero evaluar: [URL del repo, plugin o skill].
+Clónalo en una carpeta temporal vacía, sin instalarlo ni ejecutarlo.
+Dame pros, contras frente a lo que ya uso y tu recomendación con evidencia.</code></pre>
+        </div>
+        <p class="fine-note">Es análisis estático: puede marcar falsos positivos y dejar pasar riesgos reales. Lee a mano lo que marque.</p>
+      </div>
+    </section>
+    <section class="sec sec-alt" id="casos">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Para negocios de <em>Ecuador</em></h2>
+          <hr class="title-rule">
+        </div>
+        <div class="ic-cards">
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-utensils"/></svg></span><h3>Inmobiliaria en Manta</h3><p>Antes de publicar la landing de un proyecto, la pasas por <code>peso-landing</code>: fotos pesadas, botones sin nombre o un <code>.env</code> olvidado salen antes que el cliente los vea.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-cross"/></svg></span><h3>Consultorio en Jipijapa</h3><p>Creas una skill con el tono de tus respuestas de citas y la instalas una vez. Sin datos de pacientes dentro.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span><h3>Un repo, varias skills</h3><p>Instalas solo las que necesitas con <code>--skill</code> y no copias carpetas a mano.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="errores">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Errores <em>comunes</em></h2>
+          <hr class="title-rule">
+        </div>
+<div class="accordion">
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>No aparece en /skills</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Revisa la instalación con <code>npx skills add StefanoCoronado/skills-portables --list</code>. Después corre <code>/reload-skills</code> o reinicia Claude Code.</p></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>El instalador no encuentra la skill</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Usa el nombre exacto que sale en <code>--list</code>. Si el repo cambió, vuelve a listar antes de instalar.</p></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>El escaneo marca riesgo Medium o superior</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Anota el nivel y el motivo que muestre. Antes de usarla sobre datos sensibles, lee la skill entera y revisa sus scripts.</p></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>Veo la skill duplicada</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Si tienes la misma skill en la ruta de usuario y en la del proyecto, puede salir dos veces. Deja una sola copia.</p></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>El script dice que falta un módulo o no corre</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Comprueba que tienes Node 18 o superior con <code>node -v</code> y que la ruta del script y la de la landing son correctas.</p></div>
+          </div>
+        </div>
+        <p class="fine-note">Fuente y licencia: repo skills-portables, de Stéfano Coronado, licencia MIT. Descarga: <a href="https://github.com/StefanoCoronado/skills-portables" target="_blank" rel="noopener">https://github.com/StefanoCoronado/skills-portables</a>. Formato: documentación de Claude Code. Instalar una skill de terceros trae código a tu equipo: lee su <code>SKILL.md</code> y sus scripts antes de usarla. Los prompts son de Crowned Studio y puedes usarlos libremente.</p>
+      </div>
+    </section>
+
+
+<section class="cta-final cta-imm scene" id="contacto">
+      <div class="dot-grid" aria-hidden="true"></div>
+      <div class="cta-bg-text" aria-hidden="true">CORONA</div>
+      <div class="wrap">
+        <div class="cs" aria-hidden="true">
+          <div class="w-h it" style="--d:.1s"><b>Tu skill</b><span>Claude Code</span></div>
+          <ul class="w-l"><li class="it" style="--d:0.5s"><i class="bx"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Instalada</li><li class="it" style="--d:1.0s"><i class="bx"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Skill visible</li><li class="it" style="--d:1.5s"><i class="bx"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Primer uso hecho</li><li class="it" style="--d:2.0s"><i class="bx"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Peso verificado</li></ul>
+          <div class="w-b it" style="--d:2.6s"><span>Lista en Claude Code</span><em class="bar"><i style="--d:2.8s"></i></em></div>
+          <div class="chip it" style="--d:3.8s"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Un comando, tu skill</div>
+        </div>
+        <div class="cta-crown" aria-hidden="true"><i class="halo"></i><img src="assets/crowned-logo-88.png" alt="" width="48" height="48"></div>
+        <span class="eyebrow">Sistemas de IA · ventas · Crowned Studio</span>
+        <h2>¿Quieres mejorar tu sistema de ventas y aplicar <em>inteligencia artificial</em> a tu negocio?</h2>
+        <p class="lede">Diseñamos sistemas con IA que atienden, responden y venden por ti. Hablemos 15 minutos y lo coronamos.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://calendly.com/stefanocoronado24/15" target="_blank" rel="noopener">Contáctanos</a>
+          <a class="btn btn-ghost btn-lg" href="https://instagram.com/stefanocoronadoo" target="_blank" rel="noopener">Escríbenos por Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Crowned Studio © 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
