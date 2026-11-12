@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparte tu skill con un comando | Crowned Studio</title>
-  <meta name="description" content="Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
+  <meta name="description" content="Instala skills de un repo con npx skills add: eliges alcance de proyecto o global, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Comparte tu skill con un comando | Crowned Studio">
-  <meta property="og:description" content="Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
+  <meta property="og:description" content="Instala skills de un repo con npx skills add: eliges alcance de proyecto o global, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.">
   <meta property="og:locale" content="es_EC">
   <meta name="twitter:card" content="summary">
 
@@ -18,7 +18,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Comparte tu skill con un comando",
-    "description": "Instala skills de un repo con npx skills add: escaneo de riesgo antes de instalar, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.",
+    "description": "Instala skills de un repo con npx skills add: eliges alcance de proyecto o global, pasos de uso en Claude Code y una skill de ejemplo con licencia MIT.",
     "inLanguage": "es-EC",
     "author": { "@type": "Person", "name": "Stéfano Coronado" },
     "publisher": { "@type": "Organization", "name": "Crowned Studio" }
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="cs" role="img" aria-label="Ejemplo: npx skills add instala peso-landing y Claude Code la lista con /skills"><div class="w-h it" style="--d:.1s"><b><svg class="ic acc" aria-hidden="true"><use href="#i-folder"/></svg>npx skills add</b><span>peso-landing</span></div>
-      <ul class="w-l"><li class="it" style="--d:0.5s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></i>Escaneo de riesgo<small>antes de instalar</small></li><li class="it" style="--d:1s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></i>Instalación<small>--skill peso-landing</small></li></ul><div class="prompt-line it" style="--d:.5s"><svg class="ic ic-claude" aria-hidden="true"><use href="#i-claude"/></svg><span>/peso-landing ./mi-landing</span></div><div class="chip cl it" style="--d:2.6s"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Un comando, una skill</div></div>
+      <ul class="w-l"><li class="it" style="--d:0.5s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></i>Alcance<small>proyecto o global</small></li><li class="it" style="--d:1s"><i class="bx acc"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></i>Instalación<small>--skill peso-landing</small></li></ul><div class="prompt-line it" style="--d:.5s"><svg class="ic ic-claude" aria-hidden="true"><use href="#i-claude"/></svg><span>/peso-landing ./mi-landing</span></div><div class="chip cl it" style="--d:2.6s"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg>Un comando, una skill</div></div>
       </div>
     </section>
 
@@ -86,7 +86,7 @@
           <tr><td><svg class="ic ic-ok" aria-hidden="true"><use href="#i-check"/></svg> Formato</td><td>Una skill es una carpeta con un <code>SKILL.md</code>, el formato del estándar abierto Agent Skills.</td></tr>
           <tr><td><svg class="ic ic-warn" aria-hidden="true"><use href="#i-alert"/></svg> Probado</td><td>Los scripts corren con Node en Windows. La instalación completa con <code>npx</code> y la ejecución desde Claude Code son pendientes: PRUEBA PROPIA PENDIENTE.</td></tr>
           <tr><td><svg class="ic ic-warn" aria-hidden="true"><use href="#i-scale"/></svg> Tamaño</td><td>Mantén tu <code>SKILL.md</code> corto. El de peso-landing pesa 2,6 KB.</td></tr>
-          <tr><td><svg class="ic ic-bad" aria-hidden="true"><use href="#i-lock"/></svg> Riesgo</td><td>El instalador escanea con Snyk y muestra el nivel de riesgo. Es un análisis estático: puede fallar en ambos sentidos.</td></tr>
+          <tr><td><svg class="ic ic-bad" aria-hidden="true"><use href="#i-lock"/></svg> Permisos</td><td>Las skills corren con los permisos completos del agente. Al terminar, el instalador avisa «Review skills before use; they run with full agent permissions»: revisa la skill antes de usarla.</td></tr>
         </tbody></table>
         <p class="fine-note">Comandos del repo skills-portables y documentación de Claude Code, revisados el 11/11/2026.</p>
       </div>
@@ -99,7 +99,7 @@
         </div>
         <ol class="tl">
 <li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg></span><div><h3>Mira qué trae el repo</h3><p>Lista las skills de <a href="https://github.com/StefanoCoronado/skills-portables" target="_blank" rel="noopener">skills-portables</a> sin instalar nada.</p><div class="mini-cmd"><code id="s0">npx skills add StefanoCoronado/skills-portables --list</code><button type="button" class="copy-btn" data-copy-target="s0">Copiar</button></div></div><span class="tm">1 min</span></li>
-<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><div><h3>Instala la skill</h3><p>Con <code>--skill</code> eliges una: <code>peso-landing</code> o <code>antes-de-instalar</code>. El instalador escanea la skill y muestra el nivel de riesgo: anótalo antes de usarla.</p><div class="mini-cmd"><code id="s1">npx skills add StefanoCoronado/skills-portables --skill peso-landing</code><button type="button" class="copy-btn" data-copy-target="s1">Copiar</button></div></div><span class="tm">2 min</span></li>
+<li><span class="nd"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><div><h3>Instala la skill</h3><p>Con <code>--skill</code> eliges una: <code>peso-landing</code> o <code>antes-de-instalar</code>. El comando pregunta el alcance: Proyecto (en este directorio) o Global (<code>-g</code>). Al terminar avisa «Review skills before use; they run with full agent permissions»: revisa la skill antes de usarla.</p><div class="mini-cmd"><code id="s1">npx skills add StefanoCoronado/skills-portables --skill peso-landing</code><button type="button" class="copy-btn" data-copy-target="s1">Copiar</button></div></div><span class="tm">2 min</span></li>
 <li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><div><h3>Comprueba que la ve</h3><p>En Claude Code escribe <code>/skills</code>. Si no sale, corre <code>/reload-skills</code> o reinicia Claude Code.</p></div><span class="tm">1 min</span></li>
 <li><span class="nd cl"><svg class="ic" aria-hidden="true"><use href="#i-claude"/></svg></span><div><h3>Invócala por su nombre</h3><p>Claude Code: <code>/peso-landing ./mi-landing</code>. Sin agente, con Node 18 o superior: <code>node ruta-de-la-skill/scripts/auditar.mjs ./mi-landing</code>, con la ruta donde quedó instalada.</p></div><span class="tm">2 min</span></li>
         </ol>
@@ -177,7 +177,7 @@ No modifiques ningún archivo.</code></pre>
         </div>
         <div class="ic-cards">
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Probado</h3><p>Los scripts con Node en Windows: <code>auditar.mjs</code> dio 85/100 el 09/11. <code>npx skills add --list</code> encuentra las dos skills (11/11).</p></div>
-          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><h3>Sin probar</h3><p>La instalación completa con <code>npx</code>, el escaneo de riesgo y que Claude Code liste y ejecute la skill instalada.</p></div>
+          <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><h3>Sin probar</h3><p>La instalación completa con <code>npx</code>, la elección de alcance y que Claude Code liste y ejecute la skill instalada.</p></div>
           <div class="ic-card"><span class="ib "><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><h3>Fuera de alcance</h3><p>Otras herramientas, donde no afirmo que la skill funcione.</p></div>
         </div>
         <p class="fine-note">Análisis estático: que no encuentre nada no prueba que algo sea seguro. Lee el SKILL.md y los scripts antes de usarla sobre datos sensibles.</p>
@@ -263,8 +263,8 @@ Dame pros, contras frente a lo que ya uso y tu recomendación con evidencia.</co
             <div class="acc-panel"><p>Usa el nombre exacto que sale en <code>--list</code>. Si el repo cambió, vuelve a listar antes de instalar.</p></div>
           </div>
           <div class="acc-item">
-            <button type="button" class="acc-trigger" aria-expanded="false"><span>El escaneo marca riesgo Medium o superior</span><span class="acc-icon" aria-hidden="true"></span></button>
-            <div class="acc-panel"><p>Anota el nivel y el motivo que muestre. Antes de usarla sobre datos sensibles, lee la skill entera y revisa sus scripts.</p></div>
+            <button type="button" class="acc-trigger" aria-expanded="false"><span>Sale «Review skills before use» al terminar</span><span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-panel"><p>Es el aviso normal del instalador: la skill corre con los permisos completos del agente. Antes de usarla sobre datos sensibles, lee la skill entera y revisa sus scripts.</p></div>
           </div>
           <div class="acc-item">
             <button type="button" class="acc-trigger" aria-expanded="false"><span>Veo la skill duplicada</span><span class="acc-icon" aria-hidden="true"></span></button>
